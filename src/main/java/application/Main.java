@@ -13,13 +13,11 @@ public class Main {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("entity-jpa");
 		EntityManager em = emf.createEntityManager();
 
-		em.getTransaction().begin();
 
 		int id = 2;
 		
 		User getUser = em.find(User.class, id);
 
-		em.getTransaction().commit();
 		System.out.println(getUser);
 		System.out.print("feito");
 		
