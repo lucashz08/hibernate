@@ -2,7 +2,7 @@ package classes;
 
 public class User {
 	
-	private int Id;
+	private Integer Id;
 	private String email;
 	private String password;
 	
@@ -11,7 +11,7 @@ public class User {
 	}
 
 
-	public User(int id, String email, String password) {
+	public User(Integer id, String email, String password) {
 
 		this.Id = id;
 		this.email = email;
@@ -19,12 +19,12 @@ public class User {
 	}
 
 
-	public int getId() {
+	public Integer getId() {
 		return Id;
 	}
 
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		Id = id;
 	}
 
