@@ -7,7 +7,7 @@
 	<persistence-unit name="entity-jpa" transaction-type="RESOURCE_LOCAL">
 		<properties>
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://http://201.46.39.78/spring?useSSL=false&amp;serverTimezone=UTC" />
+				value="jdbc:mysql://201.46.39.78:3306/spring?useSSL=false&amp;serverTimezone=UTC" />
 				
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />

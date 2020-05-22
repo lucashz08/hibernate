@@ -10,13 +10,22 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		User u = new User(1, "lucas@gmail.com", "1234");
-		User u2 = new User(2, "viviane@gmail.com", "4321");
-		User u3 = new User(3, "livia@gmail.com", "1243");
+		User u = new User(null, "lucas@gmail.com", "1234");
+		User u2 = new User(null, "viviane@gmail.com", "4321");
+		User u3 = new User(null, "livia@gmail.com", "1243");
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("entity-jpa");
 		EntityManager em = emf.createEntityManager();
 
+		em.getTransaction().begin();
+		
+		em.persist(u); // save class in the database
+		em.persist(u2); 
+		em.persist(u3);
+		
+		em.getTransaction().commit();
+		
+		System.out.print("feito");
 	}
 
 }
